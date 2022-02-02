@@ -58,7 +58,7 @@ class ASTVisualizer(ast.NodeVisitor):
         self.extend_ast(node, label, "orange")
 
     def visualize(self, save_path: Optional[str] = None):
-        plt.figure(1, figsize=(25, 25))
+        plt.figure(1, figsize=(30, 30))
         pos = graphviz_layout(self.ast, prog="dot")
         nx.draw(self.ast, pos,
                 labels=self.label_dict, with_labels=True,

@@ -1,9 +1,15 @@
-def get_fib(n: int) -> int:
-    if n < 0:
+from typing import List
+
+
+def get_fib(n: int) -> List[int]:
+    if n <= 0:
         raise ValueError(f"Invalid n: {n}.")
 
-    curr, next_ = 0, 1
-    for i in range(n):
-        curr, next_ = next_, curr + next_
+    if n == 1:
+        return [0]
 
-    return curr
+    values = [0, 1]
+    for i in range(n - 2):
+        values.append(values[-1] + values[-2])
+
+    return values
