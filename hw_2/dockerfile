@@ -1,0 +1,23 @@
+FROM ubuntu:18.04
+FROM python:3
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends texlive-latex-recommended texlive-fonts-recommended && \
+    apt-get install -y --no-install-recommends texlive-latex-extra texlive-fonts-extra texlive-lang-all && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN pip install -i https://test.pypi.org/simple/ homework-1-Sushentsev && \
+    pip install matplotlib==3.5.1 && \
+    pip install networkx==2.6.3 && \
+    pip install pydot==1.4.2
+
+RUN echo $(pwd)
+RUN echo $(ls)
+
+WORKDIR /hw_2
+VOLUME /hw_2
+ADD . /hw_2
+
+CMD python3 image_generator.py
+CMD cd artifacts && pdflatex main.tex
+
