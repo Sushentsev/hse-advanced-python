@@ -1,0 +1,4 @@
+n=35, times=10
+base: 38.32 sec
+threading: 38.74 sec
+multiprocessing: 9.78 sec

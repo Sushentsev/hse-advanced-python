@@ -1,0 +1,6 @@
+Sent from 'main' message 'My first line'
+Received to 'main' message 'zl svefg yvar'
+Sent from 'main' message 'second line'
+Received to 'main' message 'frpbaq yvar'
+Sent from 'main' message 'Last line my'
+Received to 'main' message 'ynfg yvar zl'
